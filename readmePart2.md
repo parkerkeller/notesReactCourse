@@ -350,8 +350,8 @@ React Course - Udemy - Andrew Mead - Part II
 - The object will contain a property ```type``` and the value by convention is all uppercase and underscore if more than one word
 - Then we send the object to the store using ```store.dispatch({ my_action_object })```
 - When we call ```store.dispatch``` the function ```createStore``` runs for the second time. The action object gets passed as the second argument to the function 
-- Then we can use the action type to take action like adding one to the count otherwise it's the first time Redux is running the function and just return the state without change
-- Inside the action type checking we return an object with the new state, we shouldn't change the state or action but instead return the new state we use the state values to compute the new state - similar to this.setState
+- Then we can use the action type to take action on the type we are looking for (i.e. 'INCREMENT'), unless it's the first time Redux is running the function, then it just returns the state without change
+- Inside the action type checking we return an object with the new state. We shouldn't change the state or action, but instead return the new state object. We use the state values to compute the new state - similar to this.setState
   ```javascript
   import { createStore } from 'redux'
 
